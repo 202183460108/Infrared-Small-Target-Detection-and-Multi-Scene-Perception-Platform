@@ -1,11 +1,19 @@
-# 《烁影智寻：红外小目标智能检测与多场景安全感知平台》
-![76c05a2608b631d1e0cb2c098d23ffde](https://github.com/user-attachments/assets/b256de40-231d-4dbb-b8ad-8fdb2c6b71b4)
+# CFFormer
+This repo holds code for [CFFormer: A Cross-Fusion Transformer Framework for the Semantic Segmentation of Multi-Source Remote Sensing Images](https://ieeexplore.ieee.org/document/10786275)
+# The overall architecture
+We propose a novel network framework based on a transformer model, which uses the FCM and FFM to facilitate the fusion of heterogeneous data sources and achieve more accurate semantic segmentation. The algorithmic framework of this paper is shown in Figure. In detail, the proposed approach relies on the classical encoder-decoder architecture, where the encoder incorporates feature extraction networks without weight sharing: the FCM for filtering diverse modal noise and differences, and the FFM for enhancing the information interaction and fusion. The decoder part aggregates the multi-scale features to generate the final result. Other common methods such as ResNet can be employed as an alternative for the feature extraction network.
+![overall architecture](datasets/figure.png)
+# Citation
+If you find this work useful, please consider citing:
 
-
-# 🛠️Dataset
-本项目 data 文件夹已搭载多领域实景数据集，广泛覆盖海面、空天、地面夜视、城市监控等典型应用场景，为算法验证与模型训练提供丰富的样本支撑。目前，首批数据已公开发布，涵盖多种环境条件和目标类型，助力研究快速启动。
-我们秉持开放共享理念，后续将持续扩充数据规模与场景多样性，定期更新并补充更多高质量、高难度的实测数据，进一步完善数据分布的广度与深度。
-欢迎访问 data 目录浏览现有数据，并持续关注项目动态。
-# 🚀Project
-项目当前正处于高速迭代与核心功能攻坚阶段，部分关键模块的工程代码已率先上传至仓库，供社区预览与验证。我们秉持  "稳定一部分，开放一部分"  的原则，将在功能逐步完善、通过系统性测试并达到生产级标准后，分阶段、全量开源所有源代码。
-后续我们将以 「正式版」 为里程碑，陆续发布完整代码库、详细文档及基准测试，敬请期待！
+```bibtex
+@ARTICLE{10786275,
+  author={Zhao, Jinqi and Zhang, Ming and Zhou, Zhonghuai and Wang, Zixuan and Lang, Fengkai and Shi, Hongtao and Zheng, Nanshan},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={CFFormer: A Cross-Fusion Transformer Framework for the Semantic Segmentation of Multisource Remote Sensing Images}, 
+  year={2025},
+  volume={63},
+  number={},
+  pages={1-17},
+  keywords={Feature extraction;Optical imaging;Adaptive optics;Optical sensors;Semantic segmentation;Transformers;Remote sensing;Correlation;Noise;Fuses;Feature correction module (FCM);feature fusion module (FFM);multisource remote sensing images (RSIs);semantic segmentation;vision transformer},
+  doi={10.1109/TGRS.2024.3507274}}
